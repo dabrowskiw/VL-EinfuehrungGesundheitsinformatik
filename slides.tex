@@ -1,0 +1,254 @@
+\documentclass[aspectratio=169,t]{beamer}
+\include{header}
+\subtitle{0: Allgemeines}
+\addbibresource{Bilder/imagesources.bib}
+\begin{document}
+
+\setbeamertemplate{footline}[first]
+\begin{frame}[noframenumbering]
+\titlepage
+\end{frame}
+
+\setbeamertemplate{footline}[presentationbody] 
+
+\begin{frame}{Vorstellung}
+ \begin{itemize}
+     \item<2-> Kurz zu mir
+     \only<2-4>{
+      \begin{itemize}
+        \item<2-4> Kontakt: Piotr.Dabrowski@posteo.de - gerne nutzen!
+        \item<3-4> Geboren 1981 in Warschau
+        \item<3-4> Studium der Biotechnologie \& Informatik an der TU Berlin
+        \item<3-4> Promotion über Auswertung von Hochdurchsatzdaten für Virus-Diagnostik
+        \item<3-4> Aufbau der bioinformatischen Analytik für das NGS-Labor des RKI
+        \item<3-4> Aufbau der Bioinformatics Core Facility am RKI
+        \item<4> Hang zu unkonventionellen Vorlesungsmethoden - Feedback erwünscht!
+      \end{itemize}
+     }
+     \item<5-> Der Todesstern \& (ausgewählte) andere Hilfsmittel
+     \item<9-> Sie \& Ihre Vorstellungen von der Gesundheitsinformatik
+     \only<10->{
+       \begin{itemize}
+           \item Tafelbild - coming to a git repo near you starting tomorrow!
+       \end{itemize}
+     }
+ \end{itemize}
+ \only<5-8>{
+  \begin{textblock}{15}(2,7)
+   \includegraphics[width=3cm]{Bilder/Todesstern.jpg}
+  \end{textblock}
+ }
+ \only<6-8>{
+  \begin{textblock}{15}(5.5,8.25)
+   \includegraphics[width=3cm]{Bilder/Tischnamensschild.png}
+  \end{textblock}
+ }
+ \only<7-8>{
+  \begin{textblock}{15}(9,7.5)
+   \includegraphics[angle=77,origin=c,height=2cm]{Bilder/Tischnamensschild.png}
+  \end{textblock}
+ }
+ \only<8>{
+  \begin{textblock}{15}(11.5,8)
+   \includegraphics[width=3cm]{Bilder/DSLR.png}
+  \end{textblock}
+ }
+\end{frame}
+
+\begin{frame}{Inhalt der Vorlesung}
+ Was macht Informatik im Gesundheitswesen? \uncover<2->{Am Beispiel eines Patienten mit Tuberkulose oder Krebs.}
+\note{Am Beispiel des Weges eines Patienten durch ein Krankenhaus}
+ \begin{itemize}
+     \item<3-> Gesundheitssystem allgemein
+     \only<3>{\begin{itemize}
+        \item Wo kommt das Geld für die Behandlung her?
+        \item Wer regelt was wann wie gemacht wird?
+        \item Welche Daten werden wo gespeichert?
+     \end{itemize}}
+     \item<4-> Molekulare Diagnostik
+     \only<4>{\begin{itemize}
+        \item Erregernachweise (ELISA, PCR)
+        \item Grundlagen der Arbeit mit Bilddaten
+     \end{itemize}}     
+     \item<5-> Bildgebende Verfahren
+     \only<5>{\begin{itemize}
+        \item Blick in das Gewebe: Ultraschall, Röntgen, \\CT, MRT, OCT
+        \item Ein wenig Mathematik (Fourier-Transformation)
+        \item Fortgeschrittenere Bilddatenverarbeitung
+     \end{itemize}}     
+     \item<6-> DNA-basierte Hochdurchsatz-Diagnostik
+     \only<6>{\begin{itemize}
+        \item Microarrays, Next Generation Sequencing
+        \item Einige Methoden des maschinellen Lernens
+        \item Krebsdiagnostik
+     \end{itemize}}     
+     \item<7-> Proteomik
+     \only<7>{\begin{itemize}
+        \item Tandem-MS
+        \item Wie sicher ist man sich, es falsch \\gemacht zu haben?
+        \item Verbesserte Krebsdiagnostik
+     \end{itemize}}     
+ \end{itemize}
+ \only<3>{
+  \begin{textblock}{10}(7.5,4.5)
+   \begin{figure}[h!]
+     \label{figure:VDEK}
+     \includegraphics[width=7.5cm]{Bilder/Gesundheitspolitik.png}
+     \caption{Cartoon von VDEK \cite{VDEK}}
+   \end{figure}
+  \end{textblock}
+ }
+ \addtocounter{figure}{1}
+ \only<4>{
+  \begin{textblock}{10}(7,4.5)
+   \begin{figure}[h!]
+     \label{figure:ELISA}
+     \includegraphics[width=7.5cm]{Bilder/ELISA.jpg}
+     \caption{ELISA-Platte \cite{ELISA}}
+   \end{figure}
+  \end{textblock}
+ }
+ \addtocounter{figure}{1}
+ \only<5>{
+  \begin{textblock}{10}(7.5,4.5)
+   \begin{figure}[h!]
+     \label{figure:CT}
+     \includegraphics[width=4.5cm]{Bilder/CT.png}
+     \caption{Radon-Transformation \cite{Radon}}
+   \end{figure}
+  \end{textblock}
+ }
+ \addtocounter{figure}{1}
+ \only<6>{
+  \begin{textblock}{10}(7.5,4.5)
+   \begin{figure}[h!]
+     \label{figure:NGS}
+     \includegraphics[width=6.5cm]{Bilder/NGS.jpg}
+     \caption{NGS-Labor am Sanger Institute \cite{NGS}}
+   \end{figure}
+  \end{textblock}
+ }
+ \addtocounter{figure}{1}
+ \only<7>{
+  \begin{textblock}{10}(7,4.5)
+   \begin{figure}[h!]
+     \label{figure:HPLCMS}
+     \includegraphics[width=6.5cm]{Bilder/LCMS.jpg}
+     \caption{Ein (älteres) Massenspektrometer \cite{LCMS}}
+   \end{figure}
+  \end{textblock}
+ }
+\end{frame}
+
+\begin{frame}{Inhalt der Übung}
+ \begin{itemize}
+     \item Firmenbesuche
+     \item Softwareentwicklung basierend auf Vorlesungs-Inhalten
+     \item Kurzvorstellungen der Übungsergebnisse
+     \item<2-> Grobplan (180 Minuten Übung alle 2 Wochen):
+     \note<2->{Abwelchselnd, da sonst zu wenig Zeit für Firmenbesuche.}
+     \only<2>{
+      \begin{itemize}
+        \item KW42: Besuch GKV-Spitzenverband
+        \item KW44: Python-Grundlagen, Auswertung von Daten aus molekularer Diagnostik
+        \item KW46: Fortgeschrittenere Bilddaten-Auswertung
+        \item KW48: Besuch der MicroDiscovery GmbH (Auftragsdatenauswertung, Microarrays)
+        \item KW50: Auswertung von Microarray-Daten
+        \item KW02: Besuch des RKI (NGS-Lab, Proteomik \& Bioinformatik)
+        \item KW04: Auswertung von NGS- und Proteom-Daten
+      \end{itemize}
+     }
+     \only<3>{
+      \begin{itemize}
+        \item \textbf{KW42}: Besuch GKV-Spitzenverband
+        \item KW44: Python-Grundlagen, Auswertung von Daten aus molekularer Diagnostik
+        \item KW46: Fortgeschrittenere Bilddaten-Auswertung
+        \item \textbf{KW48}: Besuch der MicroDiscovery GmbH (Auftragsdatenauswertung, Microarrays)
+        \item KW50: Auswertung von Microarray-Daten
+        \item \textbf{KW02}: Besuch des RKI (NGS-Lab, Proteomik \& Bioinformatik)
+        \item KW04: Auswertung von NGS- und Proteom-Daten
+      \end{itemize}
+     }
+ \end{itemize}
+\end{frame}
+
+\begin{frame}{Benotung}
+ \note<2>{Muss nicht ``fertig werden'', Idee und Herangehensweise ausschlaggebend.}
+ \begin{itemize}
+     \item<1-> Klausur: $40\%$
+     \item<1-> Übungsaufgaben: $40\%$
+     \item<1-> Ergebnisvorstellung: $20\%$
+     \item<2-> Konsequente Verwendung von git für Übungsaufgaben: $10\%$ Bonus
+     \item<3-> Fachliche Fehler in der Vorlesung:
+     \begin{itemize}
+         \item $5\%$ Bonus pro Fehler 
+         \item Kumulativ
+         \item Maximal $15\%$ pro Semester
+     \end{itemize} 
+     \item<4-> Akzeptierte Verbesserungen an Vorlesung/Handout:
+     \begin{itemize}
+         \item $2.5\%$ Bonus pro Fehler, $5\%$ falls per pull request
+         \item Kumulativ
+         \item Maximal $7.5\%$ pro Semester, $15\%$ falls per pull request
+     \end{itemize} 
+ \end{itemize}
+\end{frame}
+
+\begin{frame}{Exkurs: Warum Python?}
+  \only<2->{Was sind typische Aufgabenbereiche für Bioinformatiker?\vspace{0.3cm}}
+  \note{Das bezieht sich alles primär auf Bioinformatik\\}
+  \note{Medizininformatik: 99\% Windows}
+  \begin{columns}
+   \begin{column}{0.5\textwidth}
+     \only<3->{\centering \textbf{Softwareentwicklung}}
+     \begin{itemize}
+       \item<3->Produktzentriert
+       \item<3->Performante Implementation eines Algorithmus
+       \item<3->Stabilität, Reproduzierbarkeit, gutes User Interface
+       \item<4->Primär Java, C++
+     \end{itemize}
+   \end{column}
+   \begin{column}{0.5\textwidth}
+     \only<5->{\centering \textbf{Datenauswertung}}
+     \begin{itemize}
+       \item<5->Projektzentriert
+       \item<5->Verwendung existierender Tools
+       \item<5->Entwicklung von Pipelines
+       \item<5->Implementation kleinerer Algorithmen
+       \item<5->Flexibilität, bedarfsgerechte Visualisierung
+       \item<6->Primär Python, R
+     \end{itemize}
+   \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Exkurs: Warum Python (II)?}
+  \begin{textblock}{10}(1,2.8)
+   \begin{figure}[h!]
+     \frame{\includegraphics[width=12cm]{Bilder/PythonPulls.jpg}}
+     \caption{Pull-requests auf github nach Sprache \cite{PythonPulls}}
+   \end{figure}
+  \end{textblock}
+ \only<2->{
+  \begin{textblock}{10}(0.9,3)
+   \begin{figure}[h!]
+     \frame{\includegraphics[width=6.5cm]{Bilder/PythonQuestions.png}}
+     \caption{Fragen auf StackOverflow nach Sprache \cite{PythonQuestions}}
+   \end{figure}
+  \end{textblock}
+ }
+ \only<3->{
+  \begin{textblock}{10}(7.1,0.6)
+   \begin{figure}[h!]
+     \includegraphics[width=7cm]{Bilder/LanguagesSalary.png}
+     \caption{Einkommen und Stellen nach Programmiersprache \cite{LanguagesSalary}}
+   \end{figure}
+  \end{textblock}
+ } 
+\end{frame}
+
+\begin{frame}{Bildquellen}
+\printbibliography
+\end{frame}
+
+\end{document}
