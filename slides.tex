@@ -29,25 +29,52 @@
             \begin{itemize}
                 \item Lerne erst Modalitäten kennen
                 \item Kenne die Vorkenntnisse/präferierte Art der Studierenden nicht
+                \item Primäres Ziel: Verständnis aufbauen, "durch den Stoff kommen" zweitrangig
+                \item Also bitte (rechtzeitig) melden, wenn Interesse an Vertiefung besteht
                 \item Gemeinsame Reise - bitte immer melden, wenn was ist!
                 \item Gerne auch außerhalb der Sprechzeiten, wenn die Tür offen ist einfach reinkommen.
             \end{itemize}
         }
         \item<5> Hang zum Experimentieren in der Vorlesung - Feedback erwünscht!
-        \note<5>{Vorlesung an Interessen anpassen, alle einbeziehen. Bitte melden, wenn es zu viel wird!}
+        \note<5>{
+        \begin{itemize}
+            \item Gruppenarbeiten
+            \item Mini-Whiteboards
+            \item Angebot: Treppenlauf
+            \item Bitte melden, wenn es zu viel wird!
+        \end{itemize}}
       \end{itemize}
      }
      \item<6-> Der Todesstern \& (ausgewählte) andere Hilfsmittel
      \item<10-> Sie \& Ihre Vorstellungen von der Gesundheitsinformatik
-     \note<10>{Gruppenarbeit:
+     \note<10>{
+     Ziele:
+     \begin{itemize}
+         \item Kennenlernen der Vorkenntnisse und Wünsche
+         \item Eventuell Anpassung der Schwerpunkte später im Semester
+         \item Eigene Auseinandersetzung hilft beim Erinnern
+     \end{itemize}
+     Gruppenarbeit:
       \begin{itemize}
-          \item Test
+          \item Informatik=Datenverarbeitung
+          \item Gesundheitsinformatik=Datenverarbeitung im Gesundheitswesen
+          \item Frage: Patient kommt mit Tuberkulose in's Krankenhaus (Gruppe A) oder zum Arzt (Gruppe B). Welche Einrichtungen könnten beteiligt sein (direkt oder indirekt), wo werden Patientendaten verarbeitet (personenbezogen/anonym/statistisch)?
+          \item Gruppengröße: 1 Reihe
+          \item Zeit: 10 Minuten
       \end{itemize}
      }
      \only<11->{
        \begin{itemize}
            \item Tafelbild - coming to a git repo near you starting tomorrow!
        \end{itemize}
+     }
+     \note<11> {
+     TODO: Diagramme:
+     \begin{itemize}
+         \item Krankenkassen/Abrechnung
+         \item Meldewesen
+         \item Konsiliarlabore/RKI/Resistenztestung
+     \end{itemize}
      }
  \end{itemize}
  \only<6-9>{
@@ -74,7 +101,17 @@
 
 \begin{frame}{Inhalt der Vorlesung}
  Was macht Informatik im Gesundheitswesen? \uncover<2->{Am Beispiel eines Patienten mit Tuberkulose oder Krebs.}
-\note{Am Beispiel des Weges eines Patienten durch ein Krankenhaus}
+\note<2>{
+ \begin{itemize}
+     \item Differentialdiagnostik z.T. interessant, werden wir gleich sehen.
+     \item Generell drei Aspekte:
+     \begin{itemize}
+         \item Gesundheitswesen/Diagnostik/Einsatz im Krankenhaus
+         \item Biologische Grundlagen
+         \item Programmierung
+     \end{itemize}
+ \end{itemize}
+}
  \begin{itemize}
      \item<3-> Gesundheitssystem allgemein
      \only<3>{\begin{itemize}
@@ -213,8 +250,13 @@
 
 \begin{frame}{Exkurs: Warum Python?}
   \only<2->{Was sind typische Aufgabenbereiche für Bioinformatiker?\vspace{0.3cm}}
-  \note{Das bezieht sich alles primär auf Bioinformatik\\}
-  \note{Medizininformatik: 99\% Windows}
+  \note<2>{
+   Vorsicht:
+   \begin{itemize}
+       \item Das bezieht sich alles primär auf Bioinformatik
+       \item Medizininformatik: 99\% Windows
+   \end{itemize}
+  }
   \begin{columns}
    \begin{column}{0.5\textwidth}
      \only<3->{\centering \textbf{Softwareentwicklung}}
@@ -237,6 +279,16 @@
      \end{itemize}
    \end{column}
   \end{columns}
+  \note<6>{
+   Allgemein: Flexibilität ist wichtig!
+   \begin{itemize}
+       \item Java super für portable, performante Applikationen, aber mies für Prototyping
+       \item Python super für Prototyping, aber schlecht für Stabilität
+       \item PHP Totalausfall bei Wartbarkeit+Sicherheit, aber toll für schnelle kleine Webapp
+       \item Wünsche JavaScript schnellen und schmerzhaften Tod, setze es trotzdem für interaktive Visualisierungen ein
+   \end{itemize}
+   Fazit: Keine silver bullet, man muss viele Stärken und Schwächen kennen, und z.T. Programmierkonzepte zwischen Sprachen übertragbar. 
+  }
 \end{frame}
 
 \begin{frame}{Exkurs: Warum Python (II)?}
