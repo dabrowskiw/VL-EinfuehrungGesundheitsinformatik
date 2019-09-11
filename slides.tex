@@ -1,15 +1,17 @@
 \documentclass[aspectratio=169,t]{beamer}
 \include{header}
-\subtitle{0: Allgemeines}
 \addbibresource{Bilder/imagesources.bib}
 \begin{document}
 
+\setbeamertemplate{background}[bgfirst]
 \setbeamertemplate{footline}[first]
+\subtitle{0: Allgemeines}
+\titlegraphic{Bilder/logo.png}
 \begin{frame}[noframenumbering]
 \titlepage
 \end{frame}
-
 \setbeamertemplate{footline}[presentationbody] 
+\setbeamertemplate{background}[bgbody]
 
 \begin{frame}{Vorstellung}
  \begin{itemize}
@@ -53,27 +55,7 @@
          \item Kennenlernen der Vorkenntnisse und Wünsche
          \item Eventuell Anpassung der Schwerpunkte später im Semester
          \item Eigene Auseinandersetzung hilft beim Erinnern
-     \end{itemize}
-     Gruppenarbeit:
-      \begin{itemize}
-          \item Informatik=Datenverarbeitung
-          \item Gesundheitsinformatik=Datenverarbeitung im Gesundheitswesen
-          \item Frage: Patient kommt mit Tuberkulose in's Krankenhaus (Gruppe A) oder zum Arzt (Gruppe B). Welche Einrichtungen könnten beteiligt sein (direkt oder indirekt), wo werden Patientendaten verarbeitet (personenbezogen/anonym/statistisch)?
-          \item Gruppengröße: 1 Reihe
-          \item Zeit: 10 Minuten
-      \end{itemize}
-     }
-     \only<11->{
-       \begin{itemize}
-           \item Tafelbild - coming to a git repo near you starting tomorrow!
-       \end{itemize}
-     }
-     \note<11> {
-     TODO: Diagramme:
-     \begin{itemize}
-         \item Krankenkassen/Abrechnung
-         \item Meldewesen
-         \item Konsiliarlabore/RKI/Resistenztestung
+         \item Aber erst mal Allgemeines fertig, dann dieser Teil der Vorstellung!
      \end{itemize}
      }
  \end{itemize}
@@ -117,7 +99,7 @@
      \only<3>{\begin{itemize}
         \item Wo kommt das Geld für die Behandlung her?
         \item Wer regelt was wann wie gemacht wird?
-        \item Welche Daten werden wo gespeichert?
+        \item Welche Daten werden wo gespeichert? 
      \end{itemize}}
      \item<4-> Molekulare Diagnostik
      \only<4>{\begin{itemize}
@@ -197,55 +179,87 @@
 \begin{frame}{Inhalt der Übung}
  \begin{itemize}
      \item Firmenbesuche
-     \item Softwareentwicklung basierend auf Vorlesungs-Inhalten
-     \item Kurzvorstellungen der Übungsergebnisse
-     \item<2-> Grobplan (180 Minuten Übung alle 2 Wochen):
-     \note<2->{Abwelchselnd, da sonst zu wenig Zeit für Firmenbesuche.}
      \only<2>{
       \begin{itemize}
-        \item KW42: Besuch GKV-Spitzenverband
-        \item KW44: Python-Grundlagen, Auswertung von Daten aus molekularer Diagnostik
-        \item KW46: Fortgeschrittenere Bilddaten-Auswertung
-        \item KW48: Besuch der MicroDiscovery GmbH (Auftragsdatenauswertung, Microarrays)
-        \item KW50: Auswertung von Microarray-Daten
-        \item KW02: Besuch des RKI (NGS-Lab, Proteomik \& Bioinformatik)
-        \item KW04: Auswertung von NGS- und Proteom-Daten
+        \item VmScope GmbH
+        \item Berlin Heart GmbH
+        \item MicroDiscovery GmbH
+        \item RKI (NGS-Lab, Proteomik \& Bioinformatik)
       \end{itemize}
      }
-     \only<3>{
-      \begin{itemize}
-        \item \textbf{KW42}: Besuch GKV-Spitzenverband
-        \item KW44: Python-Grundlagen, Auswertung von Daten aus molekularer Diagnostik
-        \item KW46: Fortgeschrittenere Bilddaten-Auswertung
-        \item \textbf{KW48}: Besuch der MicroDiscovery GmbH (Auftragsdatenauswertung, Microarrays)
-        \item KW50: Auswertung von Microarray-Daten
-        \item \textbf{KW02}: Besuch des RKI (NGS-Lab, Proteomik \& Bioinformatik)
-        \item KW04: Auswertung von NGS- und Proteom-Daten
-      \end{itemize}
+     \note<2>{
+       Zur Steigerung der Aufmerksamkeit: Kurztestate nach Besuch der Firmen, 2-3 Fragen zur Firma auf max. 1/2 A4-Seite zu beantworten.
      }
+     \item Softwareentwicklung basierend auf Vorlesungs-Inhalten
+     \item Kurzvorstellungen der Übungsergebnisse
  \end{itemize}
+\end{frame}
+
+\begin{frame}{Gesamtfahrplan (vorläufig)}
+  \note{Vorläufig, je nach:
+   \begin{itemize}
+       \item Allgemeinem Vorankommen (gründlich verstehen wichtiger als kompletten Stoff durchprügeln)
+       \item Terminverschiebungen bei Firmen
+   \end{itemize}
+  }
+  \begin{columns}
+   \begin{column}{0.5\textwidth}
+  \begin{itemize}
+    \item KW41: Gesundheitssystem
+    \item KW42: Molekulare Diagnostik % und Grundlagen Python
+    \item KW43: Ü: Datenauswertung in Python
+    \item KW44: Ü: Datenauswertung in Python
+    \item KW45: Besuch: Berlin Heart
+    \item KW46: Bildgebende Verfahren
+    \item KW47: Besuch: VmScope
+    \item KW48: Ü: Bilddatenauswertung
+  \end{itemize}
+   \end{column}
+   \begin{column}{0.5\textwidth}
+  \begin{itemize}
+    \item KW50: Besuch: MicroDiscovery
+    \item KW51: Ü: Microarray-Auswertung
+    \item KW02: NGS
+    \item KW03: Besuch: RKI
+    \item KW04: Ü: NGS-Auswertung
+    \item KW05: Ergebnisvorstellung
+%    \item KW50: 
+%    \item KW50: 
+%    \item KW44: Python-Grundlagen, Auswertung von Daten aus molekularer Diagnostik
+%    \item KW46: Fortgeschrittenere Bilddaten-Auswertung
+%    \item KW48: Besuch der MicroDiscovery GmbH (Auftragsdatenauswertung, Microarrays)
+%    \item KW50: Auswertung von Microarray-Daten
+%    \item KW02: Besuch des RKI (NGS-Lab, Proteomik \& Bioinformatik)
+%    \item KW04: Auswertung von NGS- und Proteom-Daten
+  \end{itemize}
+   \end{column}
+  \end{columns}
+   
 \end{frame}
 
 \begin{frame}{Benotung}
  \note<2>{Muss nicht ``fertig werden'', Idee und Herangehensweise ausschlaggebend.}
  \begin{itemize}
-     \item<1-> Klausur: $40\%$
-     \item<1-> Übungsaufgaben: $40\%$
+     \item<1-> Klausur: $30\%$
+     \item<1-> Übungsaufgaben: $30\%$
+     \item<1-> Firmen-Testate: $20\%$
      \item<1-> Ergebnisvorstellung: $20\%$
      \item<2-> Konsequente Verwendung von git für Übungsaufgaben: $10\%$ Bonus
      \item<3-> Fachliche Fehler in der Vorlesung:
      \begin{itemize}
          \item $5\%$ Bonus pro Fehler 
-         \item Kumulativ
-         \item Maximal $15\%$ pro Semester
+         \item Kumulativ, maximal $15\%$ pro Semester
      \end{itemize} 
      \item<4-> Akzeptierte Verbesserungen an Vorlesung/Handout:
      \begin{itemize}
          \item $2.5\%$ Bonus pro Fehler, $5\%$ falls per pull request
-         \item Kumulativ
-         \item Maximal $7.5\%$ pro Semester, $15\%$ falls per pull request
+         \item Kumulativ, maximal $7.5\%$ pro Semester, $15\%$ falls per pull request
      \end{itemize} 
  \end{itemize}
+\end{frame}
+
+\begin{frame}{Optionaler Exkurs: git}
+    
 \end{frame}
 
 \begin{frame}{Exkurs: Warum Python?}
@@ -315,6 +329,49 @@
   \end{textblock}
  } 
 \end{frame}
+
+
+\setbeamertemplate{background}[bgfirst]
+\setbeamertemplate{footline}[first]
+\subtitle{1: Gesundheitssystem}
+\titlegraphic{Bilder/logo1.png}
+\begin{frame}[noframenumbering]
+\titlepage
+\begin{textblock}{10}(4.75,15)
+\cite{GesundheitssystemLogo}
+\end{textblock}
+\end{frame}
+\setbeamertemplate{footline}[presentationbody] 
+\setbeamertemplate{background}[bgbody]
+
+\begin{frame}{Begriffsdefinition(en)}
+    \begin{definition}
+        Das Gesundheitswesen ist die Gesamtheit eines organisierten Handelns als Antwort auf das Auftreten von Krankheit und Behinderung und zur Abwehr gesundheitlicher Gefahren.
+    \end{definition}
+    \only<2->{\begin{definition}
+        Das Gesundheitswesen setzt sich aus allen Instituten, Einrichtungen, Personen und allen Maßnahmen zusammen, die für die Bevölkerung gesundheitsfördernd und -erhaltend sind, vorbeugend gegen Verletzungen und Krankheit wirken sowie diese behandeln.
+    \end{definition}}
+\end{frame}
+
+
+\begin{frame}{Ihre Vorstellungen}
+    \note{
+         Gruppenarbeit:
+      \begin{itemize}
+          \item Informatik=Datenverarbeitung
+          \item Gesundheitsinformatik=Datenverarbeitung im Gesundheitswesen
+          \item Frage: Patient kommt mit Tuberkulose (Gruppe A) oder Krebs (Gruppe B) in's Krankenhaus. Welche Einrichtungen könnten beteiligt sein (direkt oder indirekt), wo werden Patientendaten verarbeitet (personenbezogen/anonym/statistisch)?
+          \item Gruppengröße: 1 Reihe
+          \item Zeit: 10 Minuten
+      \end{itemize}
+     }
+     \only<2->{
+       \begin{itemize}
+           \item Tafelbild - coming to a git repo near you soon!
+       \end{itemize}
+    }
+\end{frame}
+
 
 \begin{frame}{Bildquellen}
 \printbibliography
