@@ -3,12 +3,16 @@
 \addbibresource{Bilder/imagesources.bib}
 \begin{document}
 
+\stepcounter{slidesection}
 \setbeamertemplate{background}[bgfirst]
 \setbeamertemplate{footline}[first]
-\subtitle{0: Allgemeines}
+\subtitle{\theslidesection: Allgemeines}
 \titlegraphic{Bilder/logo.png}
 \begin{frame}[noframenumbering]
 \titlepage
+\begin{textblock}{10}(4.75,15)
+\cite{EinfuehrungLogo}
+\end{textblock}
 \end{frame}
 \setbeamertemplate{footline}[presentationbody] 
 \setbeamertemplate{background}[bgbody]
@@ -238,6 +242,13 @@
 \end{frame}
 
 \begin{frame}{Benotung}
+ \note{Wichtig:
+ \begin{itemize}
+     \item Bei Ausarbeitungen: Saubere Quellenangaben! Kopieren ist OK (we stand on the shoulders of giants), aber sauber angeben!
+     \item Randnotiz: Bildquellen sind oft auch ``weiterführender Lesestoff'' bei Interesse.
+     \item Zweite Randnotiz: Alle meine Materialien sind CC-BY (siehe git-Repo)
+     \item Verstehen wichtiger als auswendig lernen. Eher Punktabzug bei ``auswendig gelerntes fast korrekt und dadurch sinnfrei wiedergegeben'' als ``In sich konsistenter Verständnisfehler führt zu Folgefehlern''. Natürlich im Rahmen der Vernunft...
+ \end{itemize}}
  \note<2>{Muss nicht ``fertig werden'', Idee und Herangehensweise ausschlaggebend.}
  \begin{itemize}
      \item<1-> Klausur: $30\%$
@@ -256,10 +267,6 @@
          \item Kumulativ, maximal $7.5\%$ pro Semester, $15\%$ falls per pull request
      \end{itemize} 
  \end{itemize}
-\end{frame}
-
-\begin{frame}{Optionaler Exkurs: git}
-    
 \end{frame}
 
 \begin{frame}{Exkurs: Warum Python?}
@@ -330,10 +337,10 @@
  } 
 \end{frame}
 
-
+\stepcounter{slidesection}
 \setbeamertemplate{background}[bgfirst]
 \setbeamertemplate{footline}[first]
-\subtitle{1: Gesundheitssystem}
+\subtitle{\theslidesection: Kurzer Einblick in das Gesundheitssystem}
 \titlegraphic{Bilder/logo1.png}
 \begin{frame}[noframenumbering]
 \titlepage
@@ -355,7 +362,7 @@
 
 
 \begin{frame}{Ihre Vorstellungen}
-    \note{
+    \note<1>{
          Gruppenarbeit:
       \begin{itemize}
           \item Informatik=Datenverarbeitung
@@ -393,12 +400,152 @@
    \end{itemize}}
    \begin{figure}[h!]
     \includegraphics[height=5.5cm, right]{Bilder/DatenfluesseGesundheitssystem.pdf}
-     \caption{Beispiele für Datenaustausch im Gesundheitssystem. Eigene Abbildung.}
+     \caption{Beispiele für Austausch personenbezogener Daten im Gesundheitssystem. Eigene Abbildung.}
    \end{figure}
 \end{frame}
 
+\begin{frame}{Herausforderungen}
+\note{
+\begin{itemize}
+    \item Steigende Anzahl an Ärzten
+    \item Sinkende Zeit pro Patient
+    \item Gründe: 
+    \begin{itemize}
+        \item Demographischer Wandel
+        \item Bessere Behandelbarkeit trivialer Erkrankungen führt zu mehr chronischen und komplexen Erkrankungen
+        \item<4> Zunehmende Pflegebedürftigkeit
+        \item<4> Steigende Dokumentationspflichten
+        \item<4> Steigende Komplexität der Diagnose/Behandlung
+    \end{itemize}
+\end{itemize}}
+\begin{minipage}{.4\textwidth}
+   \begin{figure}[h!]
+    \includegraphics[height=5.5cm, left]{Bilder/HausarztVersorgung.png}
+     \caption{Versorgung mit Hausärzten in 2017 \cite{HausarztVersorgung}}
+   \end{figure}
+   \end{minipage}
+  \only<2->{
+  \begin{textblock}{10}(6,0.5)
+   \begin{figure}[h!]
+     \frame{\includegraphics[width=6cm]{Bilder/Rekordlebenserwartungen.PNG}}
+     \caption{Anstieg der Rekordlebenserwartung und der Lebenserwartung in Deutschland \cite{GesundheitKrankheitAlter}}
+   \end{figure}
+  \end{textblock}
+  }
+  \only<3->{
+  \begin{textblock}{10}(6.7,6.7)
+   \begin{figure}[h!]
+     \frame{\includegraphics[width=6cm]{Bilder/InanspruchnahmeAerzte.png}}
+     \caption{Inanspruchnahme von Ärzten (letzte 12 Monate) nach Alter und Arzt \cite{GesundheitKrankheitAlter}}
+   \end{figure}
+  \end{textblock}
+  }
+  \only<4->{
+  \begin{textblock}{10}(2.8,3.8)
+   \begin{figure}[h!]
+     \frame{\includegraphics[width=6.5cm]{Bilder/Einpersonenhaushalte.png}}
+     \caption{Entwicklung der Haushaltsgröße \cite{GesundheitKrankheitAlter}}
+   \end{figure}
+  \end{textblock}
+ }
+\end{frame}
 
-\begin{frame}{Bildquellen}
+\begin{frame}{IT-Unterstützung}
+  \note{
+  \begin{itemize}
+      \item UC: Z.B. Blutdruck, Blutzucker, Sturzsensor, Lokationssensor (Wandern von Alzheimer-Patienten), Schweiß- und Herzfrequenzüberwachung zur Vorhersage epileptischer Anfälle etc.
+      \item Benachrichtigung in Stufen, z.B. Angehörige, dann Pflegepersonal
+      \item Erinnerung an Medikamente (Problem: Adhärenz!)
+      \item Generell: Ortsunabhängige Pflege (zu Hause)
+      \item <2-> Automatische Übertragung von Geräten zu zentralen Datenbanken, automatische Vorauswertungen von Bilddaten
+      \item<2-> Standardisierung - großes Problem in Medizintechnik
+      \item<3-> Abgleich verschriebener Medikamente mit gelber oder roter Liste
+      \item<5-> Automatische Benachrichtigung bei Ablauf von Blutkonserven, RFID-Kennzeichnung von OP-Besteck um Desinfektionszyklen einzuhalten etc.
+  \end{itemize}}
+  \begin{itemize}
+      \item Ubquitous Computing: Sensorik und automatische Benachrichtigungen, insbesondere in der Pflege
+      \item<2-> Verbesserung der Technikintegration
+      \item<3-> Expertensysteme zur Behandlungsunterstützung
+      \item<4-> Dokumentationsunterstützung
+      \item<5-> Logistik
+      \item<6-> Allgemein: Entlastung und Effizienzsteigerung, um bei gleichem Personal mehr Zeit für die Patienten zu haben
+  \end{itemize}
+\end{frame}
+
+\stepcounter{slidesection}
+\setbeamertemplate{background}[bgfirst]
+\setbeamertemplate{footline}[first]
+\subtitle{\theslidesection: Technische Grundlagen}
+\titlegraphic{Bilder/logo2.png}
+\begin{frame}[noframenumbering]
+\titlepage
+\begin{textblock}{10}(4.75,15)
+\cite{ProgrammingLogo}
+\end{textblock}
+\end{frame}
+\setbeamertemplate{footline}[presentationbody] 
+\setbeamertemplate{background}[bgbody]
+
+\begin{frame}{Sourcecodeverwaltung}
+\note{
+\begin{itemize}
+    \item Perforce
+    \begin{itemize}
+        \item Einsatz in großen Unternehmen (größtes Repo bei Google, 18/20 top-Spieleherstellern, Netflix etc.)
+        \item Ändert darunterliegende Technologie nach Bedarf (aktuell git.kompatibel, aber erste Version 10 Jahre vor git)
+    \end{itemize}
+    \item Subversion: Tracking von Verschieben, Umbenennen etc.
+    \item git: Durch Kommerzialisierung von BitKeeper
+    \item mercurial: Gleiches Ziel wie git (Linux-Kernel), heutzutagez.B. bei Facebook und Mozilla im Einsatz
+    \item Einer der großen heiligen Kriege: git vs. mercurial
+    \item Derzeit primär im Einsatz: SVN, Perforce, TFS (zentral), git, mercurial (dezentral)
+\end{itemize}
+}
+\begin{itemize}
+    \item Ursprüngliche Herangehensweise: Datei\_final\_final\_realfinal\_12.java...
+    \item<2-> 1972: Bell labs, SCCS (source code control system, single user, nur Textdateien)
+    \item<3-> 1986: CVS (concurrent version system, zentral, dateibasiert)
+    \item<4-> 1995: Helix core (Perforce)
+    \item<5-> 2000: SVN (subversion, zentral, verzeichnisbasiert)
+    \item<6-> 2004: TFS (team foundation server, Microsoft, zentral/git, verzeichnisbasiert mit bug tracker etc.)
+    \item<7-> 2005: git (Linus Torvalds, dezentral, verzeichnisbasiert)
+    \item<8-> 2005: mercurial (dezentral, verzeichnisbasiert)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Sourcecodeverwaltung (git)}
+\note{Abgabe von Übungsaufgaben nur als Release-Link in git-Repository}    
+\begin{minipage}{.4\textwidth}
+   \begin{figure}[h!]
+     \frame{\includegraphics[height=5.5cm]{Bilder/gitbranching2.png}}
+     \caption{Teamarbeit mit mehreren remotes \cite{gitbranching}}
+   \end{figure}
+   \end{minipage}
+  \only<2->{
+  \begin{textblock}{6}(10,0.2)
+   \begin{figure}[h!]
+    \includegraphics[height=7.3cm, left]{Bilder/gitbranching.png}
+     \caption{Komplexe branching-Strategie \cite{gitbranching}}
+   \end{figure}
+  \end{textblock}
+  }
+\end{frame}
+
+\begin{frame}{Übung: git}
+    
+\end{frame}
+
+
+\begin{frame}{Python: Interpretiert vs. kompiliert}
+    
+\end{frame}
+
+\begin{frame}{Python: IDE und notebook}
+    
+\end{frame}
+
+
+\begin{frame}[allowframebreaks]{Bildquellen}
 \printbibliography
 \end{frame}
 
