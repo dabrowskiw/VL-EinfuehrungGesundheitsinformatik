@@ -560,11 +560,19 @@
     \begin{itemize}
         \item Gitlab: Open Source (inhouse betreibbar), kostenfreie private Repositories, einfach konfigurierbares CI/CD. Aber grundsätzlich: Geschmackssache.
         \item<3-> Branch-Anpassung
+        \item<5-> Abfrage: Ist .git-credentials ein Problem? Hinweisen auf häufige Wiederverwendung von Mail-Passwort-Kombinationen
+        \item<7-> \textbf{Diskutieren}: Passwort für key. Ist passwortloser key besser oder schlechter als .git-credentials? Hinweis auf keepass
+        \item<8-> \textbf{Diskutieren}: Ist git push --force nach reset auf gepushten commit  eine gute Idee?
     \end{itemize}}
     \begin{itemize}
         \item Erstellung eines gitlab-Accounts
         \item<2-> Neues Projekt erstellen, README anpassen (online)
-        \item<3-> clone, README anpassen, commit, push
+        \item<3-> clone, README anpassen, commit
+        \item<4-> push... Aber wo geht es hin? git remote! Und was geht da hin? git branch
+        \item<5-> Credentials merken...
+        \item<6-> ...und gleich wieder löschen! 
+        \item<7-> Alternative: \href{https://docs.gitlab.com/ee/ssh/}{SSH-Key}. Dafür: clone über SSH (oder remote anpassen?)
+        \item<8-> Fehler rückgängig machen: git reset (vor und nach push)
     \end{itemize}
 \end{frame}
 
