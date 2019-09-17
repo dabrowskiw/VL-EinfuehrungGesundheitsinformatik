@@ -150,3 +150,23 @@ echo "Sooo viele neue Sachen" >> README.md
 git commit README.md -m "Noch mehr Änderungen..."
 git push origin master
 ```
+
+Vorteil: Wir können jederzeit wieder zur dummen Idee zurück (und damit sogar weiterarbeiten):
+```sh
+git checkout dummeidee
+echo "Noch mehr dumme Sachen" >> README.md 
+git commit README.md -m "Ist das immer noch dumm?"
+git push origin dummeidee
+#Und wieder zum master zurück
+git checkout master
+```
+
+...oder gar die Änderungen aus dummeidee wieder in den master zurückführen (branches zusammenführen, im Graph zu sehen)
+```sh
+git diff dummeidee master
+git merge dummeidee
+#Konflikte auflösen
+git add README.md
+git commit -m "merge from dummeidee"
+git push
+```
