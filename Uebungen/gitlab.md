@@ -170,3 +170,12 @@ git add README.md
 git commit -m "merge from dummeidee"
 git push
 ```
+
+Um eine konkrete Version mit Anderen zu teilen, können tags verwendet werden:
+```sh
+git log
+git tag -a v1.0 -m "Das ist jetzt Version 1.0" <commit-hash aus git log>
+# Wird kein commit-hash angegeben, wird automatisch HEAD getagged
+git push v1.0 origin master
+```
+
