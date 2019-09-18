@@ -1,8 +1,8 @@
 #Grundlagen
 
-Clone:
+Clone (Link direkt aus gitlab kopierbar):
 ```sh
-git clone https://gitlab.com/dabrowskiw/htwgitexample.git
+git clone https://gitlab.com/<username>/<repository>.git
 cd htwgitexample
 ```
 
@@ -51,7 +51,7 @@ Mit SSH clonen, um Sicherheit zu erhöhen:
 ```sh
 cd ..
 rm -rf htwgitexample
-git clone git@gitlab.com:dabrowskiw/htwgitexample.git
+git clone git@gitlab.com:<username>/<repository>.git
 ```
 
 Geht nicht, also erstmal keypair generieren:
@@ -71,7 +71,7 @@ ssh -T git@gitlab.com
 
 Hurra, nochmal clonen:
 ```sh
-git clone git@gitlab.com:dabrowskiw/htwgitexample.git
+git clone git@gitlab.com:<username>/<repository>.git
 ```
 
 Noch ein paar Änderungen, und committen
@@ -176,6 +176,8 @@ Um eine konkrete Version mit Anderen zu teilen, können tags verwendet werden:
 git log
 git tag -a v1.0 -m "Das ist jetzt Version 1.0" <commit-hash aus git log>
 # Wird kein commit-hash angegeben, wird automatisch HEAD getagged
-git push v1.0 origin master
+git push origin v1.0
+# Tags müssen explizit gepusht werden
 ```
 
+Tags können direkt in gitlab verlinkt werden: https://gitlab.com/<username>/<repository>/tree/v1.0
