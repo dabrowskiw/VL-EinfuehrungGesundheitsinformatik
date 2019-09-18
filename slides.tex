@@ -502,68 +502,69 @@
 \subtitle{\theslidesection: Technische Grundlagen}
 \titlegraphic{Bilder/logo2.png}
 \begin{frame}[noframenumbering]
-\titlepage
-\begin{textblock}{10}(4.75,15)
-\cite{ProgrammingLogo}
-\end{textblock}
+    \titlepage
+    \begin{textblock}{10}(4.75,15)
+        \cite{ProgrammingLogo}
+    \end{textblock}
 \end{frame}
 \setbeamertemplate{footline}[presentationbody] 
 \setbeamertemplate{background}[bgbody]
 
 \begin{frame}{Sourcecodeverwaltung}
-\note{
-\begin{itemize}
-    \item Perforce
+    \note{
+        \begin{itemize}
+            \item Perforce
+            \begin{itemize}
+                \item Einsatz in großen Unternehmen (größtes Repo bei Google, 18/20 top-Spieleherstellern, Netflix etc.)
+                \item Ändert darunterliegende Technologie nach Bedarf (aktuell git.kompatibel, aber erste Version 10 Jahre vor git)
+            \end{itemize}
+            \item Subversion: Tracking von Verschieben, Umbenennen etc.
+            \item git: Durch Kommerzialisierung von BitKeeper
+            \item mercurial: Gleiches Ziel wie git (Linux-Kernel), heutzutagez.B. bei Facebook und Mozilla im Einsatz
+            \item Einer der großen heiligen Kriege: git vs. mercurial
+            \item Derzeit primär im Einsatz: SVN, Perforce, TFS (zentral), git, mercurial (dezentral)
+        \end{itemize}
+    }
     \begin{itemize}
-        \item Einsatz in großen Unternehmen (größtes Repo bei Google, 18/20 top-Spieleherstellern, Netflix etc.)
-        \item Ändert darunterliegende Technologie nach Bedarf (aktuell git.kompatibel, aber erste Version 10 Jahre vor git)
+        \item Ursprüngliche Herangehensweise: Datei\_final\_final\_realfinal\_12.java...
+        \item<2-> 1972: Bell labs, SCCS (source code control system, single user, nur Textdateien)
+        \item<3-> 1986: CVS (concurrent version system, zentral, dateibasiert)
+        \item<4-> 1995: Helix core (Perforce)
+        \item<5-> 2000: SVN (subversion, zentral, verzeichnisbasiert)
+        \item<6-> 2004: TFS (team foundation server, Microsoft, zentral/git, verzeichnisbasiert mit bug tracker etc.)
+        \item<7-> 2005: git (Linus Torvalds, dezentral, verzeichnisbasiert)
+        \item<8-> 2005: mercurial (dezentral, verzeichnisbasiert)
     \end{itemize}
-    \item Subversion: Tracking von Verschieben, Umbenennen etc.
-    \item git: Durch Kommerzialisierung von BitKeeper
-    \item mercurial: Gleiches Ziel wie git (Linux-Kernel), heutzutagez.B. bei Facebook und Mozilla im Einsatz
-    \item Einer der großen heiligen Kriege: git vs. mercurial
-    \item Derzeit primär im Einsatz: SVN, Perforce, TFS (zentral), git, mercurial (dezentral)
-\end{itemize}
-}
-\begin{itemize}
-    \item Ursprüngliche Herangehensweise: Datei\_final\_final\_realfinal\_12.java...
-    \item<2-> 1972: Bell labs, SCCS (source code control system, single user, nur Textdateien)
-    \item<3-> 1986: CVS (concurrent version system, zentral, dateibasiert)
-    \item<4-> 1995: Helix core (Perforce)
-    \item<5-> 2000: SVN (subversion, zentral, verzeichnisbasiert)
-    \item<6-> 2004: TFS (team foundation server, Microsoft, zentral/git, verzeichnisbasiert mit bug tracker etc.)
-    \item<7-> 2005: git (Linus Torvalds, dezentral, verzeichnisbasiert)
-    \item<8-> 2005: mercurial (dezentral, verzeichnisbasiert)
-\end{itemize}
 \end{frame}
 
 \begin{frame}{Sourcecodeverwaltung (git)}
-\note{Abgabe von Übungsaufgaben nur als Release-Link in git-Repository}    
-\begin{minipage}{.4\textwidth}
-   \begin{figure}[h!]
-     \frame{\includegraphics[height=5.5cm]{Bilder/gitbranching2.png}}
-     \caption{Teamarbeit mit mehreren remotes \cite{gitbranching}}
-   \end{figure}
-   \end{minipage}
-  \only<2->{
-  \begin{textblock}{6}(10,0.2)
-   \begin{figure}[h!]
-    \includegraphics[height=7.3cm, left]{Bilder/gitbranching.png}
-     \caption{Komplexe branching-Strategie \cite{gitbranching}}
-   \end{figure}
-  \end{textblock}
-  }
+    \note{Abgabe von Übungsaufgaben nur als Release-Link in git-Repository}    
+    \begin{minipage}{.4\textwidth}
+        \begin{figure}[h!]
+            \frame{\includegraphics[height=5.5cm]{Bilder/gitbranching2.png}}
+            \caption{Teamarbeit mit mehreren remotes \cite{gitbranching}}
+        \end{figure}
+    \end{minipage}
+    \only<2->{
+        \begin{textblock}{6}(10,0.2)
+            \begin{figure}[h!]
+                \includegraphics[height=7.3cm, left]{Bilder/gitbranching.png}
+                \caption{Komplexe branching-Strategie \cite{gitbranching}}
+            \end{figure}
+        \end{textblock}
+    }
 \end{frame}
 
 \begin{frame}{Übung: git}
     \note{
-    \begin{itemize}
-        \item Gitlab: Open Source (inhouse betreibbar), kostenfreie private Repositories, einfach konfigurierbares CI/CD. Aber grundsätzlich: Geschmackssache.
-        \item<3-> Branch-Anpassung
-        \item<5-> Abfrage: Ist .git-credentials ein Problem? Hinweisen auf häufige Wiederverwendung von Mail-Passwort-Kombinationen
-        \item<7-> \textbf{Diskutieren}: Passwort für key. Ist passwortloser key besser oder schlechter als .git-credentials? Hinweis auf keepass
-        \item<8-> \textbf{Diskutieren}: Ist git push --force nach reset auf gepushten commit  eine gute Idee?
-    \end{itemize}}
+        \begin{itemize}
+            \item Gitlab: Open Source (inhouse betreibbar), kostenfreie private Repositories, einfach konfigurierbares CI/CD. Aber grundsätzlich: Geschmackssache.
+            \item<3-> Branch-Anpassung
+            \item<5-> Abfrage: Ist .git-credentials ein Problem? Hinweisen auf häufige Wiederverwendung von Mail-Passwort-Kombinationen
+            \item<7-> \textbf{Diskutieren}: Passwort für key. Ist passwortloser key besser oder schlechter als .git-credentials? Hinweis auf keepass
+            \item<8-> \textbf{Diskutieren}: Ist git push --force nach reset auf gepushten commit  eine gute Idee?
+        \end{itemize}
+    }
     \begin{itemize}
         \item Erstellung eines gitlab-Accounts
         \item<2-> Neues Projekt erstellen, README anpassen (online)
@@ -577,8 +578,42 @@
 \end{frame}
 
 
-\begin{frame}{Python: Interpretiert vs. kompiliert}
-    
+\begin{frame}[fragile]{\only<1-4,6->{Python}}
+    \note{
+        \begin{itemize}
+            \item Unterschiede compiliert and linked, interpretiert (bytecode), JIT
+            \item Source code $\rightarrow$ Object code $\rightarrow$ Executable
+        \end{itemize}
+    }
+    \begin{itemize}
+        \item Interpretierte Sprache
+        \item<4-> Multi-paradigm: Objektorientiert, mit funktionalen Elementen
+        \item<4-> Typisierung: Dynamisch, stark (dynamically, strongly typed)
+        \item<6-> Automatisches Speichermanagement
+    \end{itemize}
+    \only<2>{
+        \begin{textblock}{10}(3,0.2)
+            \begin{figure}[h!]
+                \includegraphics[height=7.3cm, left]{Bilder/langperformance.png}
+                \caption{Beispielhafter Performance-Vergleich zwischen Sprachen \cite{langperformance}}
+            \end{figure}
+        \end{textblock}
+    }
+    \only<3> {
+        \begin{textblock}{10}(2,4)
+            \lstinputlisting[frame=single, language=Python, backgroundcolor = \color{white}]{Uebungen/hello.py}
+            \caption{Beispiel für Laufzeitfehler}
+        \end{textblock}    
+    }
+    \only<5> {
+        \begin{textblock}{14}(1,0.5)
+            \lstinputlisting[frame=single, language=Python, backgroundcolor = \color{white}]{Uebungen/types.py}
+        \end{textblock}    
+        \begin{textblock}{14}(1,5.5)
+            \lstinputlisting[frame=single, language=Java, backgroundcolor = \color{white}]{Uebungen/types.java}
+            \caption{Java und Python: Schwache und starke Typisierung}
+        \end{textblock}    
+    }
 \end{frame}
 
 \begin{frame}{Python: IDE und notebook}
