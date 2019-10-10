@@ -19,28 +19,7 @@
 
 \begin{frame}{Vorstellung}
     \note<4->{
-        Erstes Mal Vorlesung, Background nicht in mobilen Applikationen\\Bitte um Geduld, Hinweise\\
-        Whiteboard:
-        \begin{itemize}
-            \item Wer nicht aufgerufen werden will, nach der VL bei mir melden (stelle keine Fragen) oder X oben links bei Antwort
-            \item Strichliste: Nur für mich für Gleichmäßigkeit, nicht zensurrelevant
-            \item Spontanes, prägnantes, kohärentes Sprechen wichtig! Beispiel: Empfehlung an Politikerin
-        \end{itemize}
-    }
- \begin{itemize}
-     \item<2-> Kurz zu mir
-     \only<2-5>{
-      \begin{itemize}
-        \item<2-5> Kontakt: Piotr.Dabrowski@htw-berlin.de - gerne nutzen!
-        \item<2-5> Github: https://github.com/dabrowskiw/
-        \item<3-5> Geboren 1981 in Warschau
-        \item<3-5> Studium der Biotechnologie \& Informatik an der TU Berlin
-        \item<3-5> Promotion über Auswertung von Hochdurchsatzdaten für Virus-Diagnostik
-        \item<3-5> Aufbau der bioinformatischen Analytik für das NGS-Labor des RKI
-        \item<3-5> Aufbau der Bioinformatics Core Facility am RKI
-        \note<3>{Entsprechend andere Schwerpunkte der VL, als bisher\\Gesundheitsinformatik ist nicht gleich Bioinformatik!}
-        \item<4-5> Seit WS 2019/2020 an der HTW
-        \note<4>{Erste Vorlesungen an der HTW:
+        Erstes Mal Vorlesung an der HTW\\Bitte um Geduld, Hinweise\\
             \begin{itemize}
                 \item Lerne erst Modalitäten kennen
                 \item Kenne die Vorkenntnisse/präferierte Art der Studierenden nicht
@@ -49,7 +28,25 @@
                 \item Gemeinsame Reise - bitte immer melden, wenn was ist!
                 \item Gerne auch außerhalb der Sprechzeiten, wenn die Tür offen ist einfach reinkommen.
             \end{itemize}
-        }
+        Whiteboard:
+        \begin{itemize}
+            \item Wer nicht aufgerufen werden will, nach der VL bei mir melden (stelle keine Fragen) oder X oben links bei Antwort
+            \item Spontanes, prägnantes, kohärentes Sprechen wichtig! Beispiel: Empfehlung an Politikerin
+        \end{itemize}
+    }
+ \begin{itemize}
+     \item<2-> Kurz zu mir
+     \only<2-5>{
+      \begin{itemize}
+        \item<2-5> Kontakt: Piotr.Dabrowski@htw-berlin.de, Sprechstunde Montag 10-11 - gerne nutzen!
+        \item<2-5> Github: https://github.com/dabrowskiw/
+        \item<3-5> Geboren 1981 in Warschau
+        \item<3-5> Studium der Biotechnologie \& Informatik an der TU Berlin
+        \item<3-5> Promotion über Auswertung von Hochdurchsatzdaten für Virus-Diagnostik
+        \item<3-5> Aufbau der bioinformatischen Analytik für das NGS-Labor des RKI
+        \item<3-5> Aufbau der Bioinformatics Core Facility am RKI
+        \note<3>{Entsprechend andere Schwerpunkte der VL, als bisher\\Gesundheitsinformatik ist nicht gleich Bioinformatik!}
+        \item<4-5> Seit WS 2019/2020 an der HTW
         \item<5> Hang zum Experimentieren in der Vorlesung - Feedback erwünscht!
         \note<5>{
         \begin{itemize}
@@ -117,13 +114,13 @@
      \item<4-> Molekulare Diagnostik
      \only<4>{\begin{itemize}
         \item Erregernachweise (ELISA, PCR)
-        \item Grundlagen der Arbeit mit Bilddaten
+        \item Grundlagen der Arbeit mit biologischen Daten 
      \end{itemize}}     
      \item<5-> Bildgebende Verfahren
      \only<5>{\begin{itemize}
-        \item Blick in das Gewebe: Ultraschall, Röntgen, \\CT, MRT, OCT
+        \item Blick in das Gewebe: Ultraschall, Röntgen, \\CT, MRT
         \item Ein wenig Mathematik (Fourier-Transformation)
-        \item Fortgeschrittenere Bilddatenverarbeitung
+        \item Bilddatenverarbeitung
      \end{itemize}}     
      \item<6-> DNA-basierte Hochdurchsatz-Diagnostik
      \only<6>{\begin{itemize}
@@ -253,11 +250,10 @@
 \begin{frame}{Benotung}
  \begin{itemize}
      \item<1-> Klausur: $40\%$
-     \item<2-> 2 Übungsaufgaben: $40\%$
+     \item<2-> 1 Klein-Projektaufgabe: $20\%$
      \only<3>{
 	 	\begin{itemize}
 			\item Abgabe nur als Link zu release oder tag auf git, per Mail bis zum 31.01.2020 Mitternacht 
-			\item 2 Aufgaben, selber ausgewählt, a $20\%$
 			\item Kleinteilige commits und branching im git-repo: jeweils $2.5\%$
 			\item Dokumentation (sinnvoll, passend zum Code): $2.5\%$
 			\item Mindestens 4 (kommentierte, sinnvoll eingesetzte) test cases: $2.5\%$
@@ -265,8 +261,16 @@
 			\item Funktionierender Code: $10\%$
 		\end{itemize}
 	 }
-     \item<4-> Firmen-Testate: $20\%$
-     \item<5-> Akzeptierte Verbesserungen an Vorlesung/Handout:
+     \item<4-> Übungsaufgaben während des Semesters: $20\%$
+	 \only<5->{
+		\begin{itemize}
+			\item In der Übung: Häkchen, wenn erledigt
+			\item Ab $75\%$ der Häkchen: $20\%$-Punkte, darunter prozentual
+			\item Häkchen-Risiko: Aufruf, die Aufgabe zu präsentieren
+		\end{itemize}
+	 }
+     \item<6-> Firmen-Testate: $20\%$
+     \item<7-> Akzeptierte Verbesserungen an Vorlesung/Handout:
      \begin{itemize}
          \item $2.5\%$ Bonus pro Fehler, $5\%$ falls per pull request
          \item Kumulativ, maximal $5\%$ pro Semester, $10\%$ falls per pull request
@@ -298,23 +302,28 @@
 \end{frame}
 
 
-\begin{frame}{Ihre Vorstellungen}
-    \note<1>{
-         Gruppenarbeit:
-      \begin{itemize}
-          \item Informatik=Datenverarbeitung
-          \item Gesundheitsinformatik=Datenverarbeitung im Gesundheitswesen
-          \item Frage: Patient kommt mit Tuberkulose (Gruppe A) oder Krebs (Gruppe B) in's Krankenhaus. Welche Einrichtungen könnten beteiligt sein (direkt oder indirekt), wo werden Patientendaten verarbeitet (personenbezogen/anonym/statistisch)?
-          \item Gruppengröße: 1 Reihe
-          \item Zeit: 10 Minuten
-      \end{itemize}
-     }
-     \only<2->{
-       \begin{itemize}
-           \item Tafelbild - coming to a git repo near you soon!
-       \end{itemize}
-    }
-\end{frame}
+%\begin{frame}{Ihre Vorstellungen}
+%    \note<1>{
+%         Gruppenarbeit:
+%      \begin{itemize}
+%          \item Informatik=Datenverarbeitung
+%          \item Gesundheitsinformatik=Datenverarbeitung im Gesundheitswesen
+%          \item Frage: Patient kommt mit Tuberkulose (Gruppe A) oder Krebs (Gruppe B) in's Krankenhaus. Welche Einrichtungen könnten beteiligt sein (direkt oder indirekt), wo werden Patientendaten verarbeitet (personenbezogen/anonym/statistisch)?
+%          \item Gruppengröße: 1 Reihe
+%          \item Zeit: 10 Minuten
+%      \end{itemize}
+%	  Datenaustausch: 
+%      \begin{itemize}
+%    	  \item Richtlinien für den Datenaustausch im Gesundheits- und Sozialwesen, 110 Seiten
+%      	  \item Häufig im Einsatz: Mainframe, COBOL
+%   	  \end{itemize}
+%     }
+%     \only<2->{
+%       \begin{itemize}
+%           \item Tafelbild - coming to a git repo near you soon!
+%       \end{itemize}
+%    }
+%\end{frame}
 
 \begin{frame}{Akteure im Gesundheitssystem (Überblick)}
    \begin{figure}[h!]
@@ -330,16 +339,12 @@
    \end{figure}
 \end{frame}
 
-\begin{frame}{Datenaustausch (Beispiel GKV)}
-   \note{\begin{itemize}
-       \item Richtlinien für den Datenaustausch im Gesundheits- und Sozialwesen, 110 Seiten
-       \item Häufig im Einsatz: Mainframe, COBOL
-   \end{itemize}}
-   \begin{figure}[h!]
-    \includegraphics[height=5.5cm, right]{Bilder/DatenfluesseGesundheitssystem.pdf}
-     \caption{Beispiele für Austausch personenbezogener Daten im Gesundheitssystem. Eigene Abbildung.}
-   \end{figure}
-\end{frame}
+%\begin{frame}{Datenaustausch (Beispiel GKV)}
+%   \begin{figure}[h!]
+%    \includegraphics[height=5.5cm, right]{Bilder/DatenfluesseGesundheitssystem.pdf}
+%     \caption{Beispiele für Austausch personenbezogener Daten im Gesundheitssystem. Eigene Abbildung.}
+%   \end{figure}
+%\end{frame}
 
 \begin{frame}{Herausforderungen}
 \note{
@@ -387,72 +392,16 @@
  }
 \end{frame}
 
-\begin{frame}{Exkurs: Warum Python?}
-  \only<2->{Was sind typische Aufgabenbereiche für Bioinformatiker?\vspace{0.3cm}}
-  \note<2>{
-   Vorsicht:
-   \begin{itemize}
-       \item Das bezieht sich alles primär auf Bioinformatik
-       \item Medizininformatik: 99\% Windows
-   \end{itemize}
-  }
-  \begin{columns}
-   \begin{column}{0.5\textwidth}
-     \only<3->{\centering \textbf{Softwareentwicklung}}
-     \begin{itemize}
-       \item<3->Produktzentriert
-       \item<3->Performante Implementation eines Algorithmus
-       \item<3->Stabilität, Reproduzierbarkeit, gutes User Interface
-       \item<4->Primär Java, C++
-     \end{itemize}
-   \end{column}
-   \begin{column}{0.5\textwidth}
-     \only<5->{\centering \textbf{Datenauswertung}}
-     \begin{itemize}
-       \item<5->Projektzentriert
-       \item<5->Verwendung existierender Tools
-       \item<5->Entwicklung von Pipelines
-       \item<5->Implementation kleinerer Algorithmen
-       \item<5->Flexibilität, bedarfsgerechte Visualisierung
-       \item<6->Primär Python, R
-     \end{itemize}
-   \end{column}
-  \end{columns}
-  \note<6>{
-   Allgemein: Flexibilität ist wichtig!
-   \begin{itemize}
-       \item Java super für portable, performante Applikationen, aber mies für Prototyping
-       \item Python super für Prototyping, aber schlecht für Stabilität
-       \item PHP Totalausfall bei Wartbarkeit+Sicherheit, aber toll für schnelle kleine Webapp
-       \item Wünsche JavaScript schnellen und schmerzhaften Tod, setze es trotzdem für interaktive Visualisierungen ein
-   \end{itemize}
-   Fazit: Keine silver bullet, man muss viele Stärken und Schwächen kennen, und z.T. Programmierkonzepte zwischen Sprachen übertragbar. 
-  }
-\end{frame}
-
-\begin{frame}{Exkurs: Warum Python (II)?}
-  \begin{textblock}{10}(1,2.8)
-   \begin{figure}[h!]
-     \frame{\includegraphics[width=12cm]{Bilder/PythonPulls.jpg}}
-     \caption{Pull-requests auf github nach Sprache \cite{PythonPulls}}
-   \end{figure}
-  \end{textblock}
- \only<2->{
-  \begin{textblock}{10}(0.9,3)
-   \begin{figure}[h!]
-     \frame{\includegraphics[width=6.5cm]{Bilder/PythonQuestions.png}}
-     \caption{Fragen auf StackOverflow nach Sprache \cite{PythonQuestions}}
-   \end{figure}
-  \end{textblock}
- }
- \only<3->{
-  \begin{textblock}{10}(7.1,0.6)
-   \begin{figure}[h!]
-     \includegraphics[width=7cm]{Bilder/LanguagesSalary.png}
-     \caption{Einkommen und Stellen nach Programmiersprache \cite{LanguagesSalary}}
-   \end{figure}
-  \end{textblock}
- } 
+\begin{frame}{Innovationspotential!}
+	Was könnte IT tun, um zu unterstützen?
+	\begin{itemie}
+		\item Zeit: 5-10 Minuten
+		\item Stichpunkt(e) auf Whiteboard
+		\item Fertig: Namensschild auf Bildschirm
+	\end{itemize}
+	\only<2>{
+		Liste: Coming to a repo near you soon!
+	}
 \end{frame}
 
 \begin{frame}{IT-Unterstützung}
@@ -491,7 +440,7 @@
 \begin{frame}{Datenflüsse im Implantateregister}
    \only<1>{\begin{figure}[h!]
     \includegraphics[height=5.5cm, right]{Bilder/Implantateregister.pdf}
-     \caption{Dateneinlieferung öim Implantateregister. Eigene Abbildung basierend auf \cite{Implantateregister}}
+     \caption{Dateneinlieferung im Implantateregister. Eigene Abbildung basierend auf \cite{Implantateregister}}
    \end{figure}
    }
    \only<2>{\begin{figure}[h!]
@@ -581,6 +530,103 @@
         \item<8-> Fehler rückgängig machen: git reset (vor und nach push)
     \end{itemize}
 \end{frame}
+
+\begon{frame}{Exkurs: Warum Python?}
+    \note{
+        \only<1-2>{
+		   \begin{itemize}
+			   \item Java super für portable, performante Applikationen, aber mies für Prototyping
+			   \item Python super für Prototyping, aber schlecht für Stabilität
+			   \item PHP Totalausfall bei Wartbarkeit+Sicherheit, aber toll für schnelle kleine Webapp
+			   \item Wünsche JavaScript schnellen und schmerzhaften Tod, setze es trotzdem für interaktive Visualisierungen ein
+		   \end{itemize}
+        }
+        \only<3->{
+            Mini-Whiteboard: Was ist wichtig bei der Entscheidung für eine Sprache für ein Projekt?
+            \textbf{Zeit: 5 Minuten}
+            \begin{itemize}
+                \item Entwickler: Einer? Mehrere? Community oder Spaltungen? Aktivität der Entwicklung? (wikipedia)
+                \item Anzahl an reifen Projekten in Sprache (flutter.dev)
+                \item Bekannte Schwachstellen und Reaktionen (exploit-db.com, cve.mitre.org etc), konkretes Beispiel: www.cvedetails.com, Oracle (Page 10), Java, Metasploit modules, CVE-2012-4681 Java 7 Applet Remote Code Execution. Google: Page 12. Dart: Dart TCP
+                \item Geeignetheit der Features für Problem (bsp. R, shell, PHP)
+                \item Verfügbarkeit von relevanten Bibliotheken (pub.dev, chart, flchart)
+                \item Verfügbarkeit aktueller Entwicklungstools
+                \item Lizenz: Vorhanden? Falls ja, Bedingungen, bsp. GPL vs. LGPL. BSD: Redist license!
+            \end{itemize}
+        }
+    }
+    Wichtig in Programmierung: Weniger eine konkrete Sprache, mehr breites Wissen und Verständnis von Konzepten. Also: Richtige Programmiersprache für das Problem wählen! \only<2->{Aber: Was heißt ``richtig?''}\only<4->{\textbf{ Und ist Python ``richtig''?}}
+    \only<3->{
+        \begin{itemize}
+            \item[\only<4>{\textbullet}\only<5->{\checkmark}] Aktive Entwicklung
+            \item[\only<4-5>{\textbullet}\only<6->{\checkmark}] Starke Aktuere in der Community
+            \item[\only<4-6>{\textbullet}\only<7->{\checkmark}] Vorhandensein reifer Produkte
+            \item[\only<4-7>{\textbullet}\only<8->{\checkmark}] Sicherheit
+            \item[\only<4-8>{\textbullet}\only<9->{\checkmark}] Relevante Bibliotheken und Entwicklungstools
+            \item[\only<4-9>{\textbullet}\only<10->{\checkmark}] Bekannte und nutzbare Lizenz
+            \item[\only<4-10>{\textbullet}\only<11->{?}] Ausreichende ROI bei fehlenden Vorkenntnissen
+        \end{itemize}
+    }
+\end{frame}
+
+\begin{frame}{Exkurs: Warum Python: ROI}
+  \only<2->{Was sind typische Aufgabenbereiche für Bioinformatiker?\vspace{0.3cm}}
+  \note<2>{
+   Vorsicht:
+   \begin{itemize}
+       \item Das bezieht sich alles primär auf Bioinformatik
+       \item Medizininformatik: 99\% Windows
+   \end{itemize}
+  }
+  \begin{columns}
+   \begin{column}{0.5\textwidth}
+     \only<3->{\centering \textbf{Softwareentwicklung}}
+     \begin{itemize}
+       \item<3->Produktzentriert
+       \item<3->Performante Implementation eines Algorithmus
+       \item<3->Stabilität, Reproduzierbarkeit, gutes User Interface
+       \item<4->Primär Java, C++
+     \end{itemize}
+   \end{column}
+   \begin{column}{0.5\textwidth}
+     \only<5->{\centering \textbf{Datenauswertung}}
+     \begin{itemize}
+       \item<5->Projektzentriert
+       \item<5->Verwendung existierender Tools
+       \item<5->Entwicklung von Pipelines
+       \item<5->Implementation kleinerer Algorithmen
+       \item<5->Flexibilität, bedarfsgerechte Visualisierung
+       \item<6->Primär Python, R
+     \end{itemize}
+   \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Exkurs: Warum Python: ROI II}
+  \begin{textblock}{10}(1,2.8)
+   \begin{figure}[h!]
+     \frame{\includegraphics[width=12cm]{Bilder/PythonPulls.jpg}}
+     \caption{Pull-requests auf github nach Sprache \cite{PythonPulls}}
+   \end{figure}
+  \end{textblock}
+ \only<2->{
+  \begin{textblock}{10}(0.9,3)
+   \begin{figure}[h!]
+     \frame{\includegraphics[width=6.5cm]{Bilder/PythonQuestions.png}}
+     \caption{Fragen auf StackOverflow nach Sprache \cite{PythonQuestions}}
+   \end{figure}
+  \end{textblock}
+ }
+ \only<3->{
+  \begin{textblock}{10}(7.1,0.6)
+   \begin{figure}[h!]
+     \includegraphics[width=7cm]{Bilder/LanguagesSalary.png}
+     \caption{Einkommen und Stellen nach Programmiersprache \cite{LanguagesSalary}}
+   \end{figure}
+  \end{textblock}
+ } 
+\end{frame}
+
 
 
 \begin{frame}[fragile]{\only<1-4,6->{Python}}
