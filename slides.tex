@@ -466,7 +466,8 @@
     \begin{itemize}
         \item Auffrischung
         \item<2-> Nachtrag zu Open Source aus KW42
-        \item<3-> Update zu Projekten (3.-15. Semester)
+	\item<3-> Besuch bei VMScope nächste Woche
+        \item<4-> Update zu Projekten (3.-15. Semester!)
     \end{itemize}
 \end{frame}
 
@@ -474,6 +475,7 @@
     \note{
         \begin{itemize}
             \item Gitlab: Open Source (inhouse betreibbar), kostenfreie private Repositories, einfach konfigurierbares CI/CD. Aber grundsätzlich: Geschmackssache.
+	    \item Aktuelle Nachrichten?
             \item<3-> Branch-Anpassung
             \item<5-> Abfrage: Ist .git-credentials ein Problem? Hinweisen auf häufige Wiederverwendung von Mail-Passwort-Kombinationen
             \item<7-> \textbf{Diskutieren}: Passwort für key. Ist passwortloser key besser oder schlechter als .git-credentials? Hinweis auf keepass
@@ -506,13 +508,13 @@
             Mini-Whiteboard: Was ist wichtig bei der Entscheidung für eine Sprache für ein Projekt?
             \textbf{Zeit: 5 Minuten}
             \begin{itemize}
-                \item Entwickler: Einer? Mehrere? Community oder Spaltungen? Aktivität der Entwicklung? (wikipedia)
-                \item Anzahl an reifen Projekten in Sprache (flutter.dev)
-                \item Bekannte Schwachstellen und Reaktionen (exploit-db.com, cve.mitre.org etc), konkretes Beispiel: www.cvedetails.com, Oracle (Page 10), Java, Metasploit modules, CVE-2012-4681 Java 7 Applet Remote Code Execution. Google: Page 12. Dart: Dart TCP
+                \item Entwickler: Einer? Mehrere? Community oder Spaltungen? Aktivität der Entwicklung? (wikipedia, PEPs, BDFL)
+                \item Anzahl an reifen Projekten in Sprache (z.B. Betriebssysteme)
+                \item Bekannte Schwachstellen und Reaktionen (exploit-db.com, cve.mitre.org etc), konkretes Beispiel: www.cvedetails.com, Oracle (Page 10), Java, Metasploit modules, CVE-2012-4681 Java 7 Applet Remote Code Execution. Google: Page 12.
                 \item Geeignetheit der Features für Problem (bsp. R, shell, PHP)
-                \item Verfügbarkeit von relevanten Bibliotheken (pub.dev, chart, flchart)
-                \item Verfügbarkeit aktueller Entwicklungstools
-                \item Lizenz: Vorhanden? Falls ja, Bedingungen, bsp. GPL vs. LGPL. BSD: Redist license!
+                \item Verfügbarkeit von relevanten Bibliotheken (pypi.org)
+		\item Verfügbarkeit aktueller Entwicklungstools (Spyder, PyCharm)
+                \item Lizenz: Vorhanden? Falls ja, Bedingungen, bsp. GPL vs. LGPL. Python: PSF 
             \end{itemize}
         }
     }
@@ -649,12 +651,14 @@
 \begin{frame}{Exkurs: Ausbruchsaufklärung}
     \begin{itemize}
         \item Hintergrund: DNA, Mutationsrate
-        \item Messung Mutationsrate:
-        \begin{itemize}
-            \item MLST
-            \item cgMLST, wgMLST
-        \end{itemize}
-        \item Auswertung: MST
+        \item<2-> Messung Mutationsrate:
+	\only<2->{
+            \begin{itemize}
+                \item MLST
+                \item cgMLST, wgMLST
+            \end{itemize}
+	}
+        \item<3> Auswertung: MST
     \end{itemize}
 \end{frame}
 
