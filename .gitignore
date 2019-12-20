@@ -4,3 +4,9 @@ header.*
 !header.tex
 .*
 !.gitignore
+*.aux
+*.log
+*.out
+*.thm
+*.toc
+script.pdf
