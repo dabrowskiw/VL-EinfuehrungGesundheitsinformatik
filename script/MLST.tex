@@ -23,3 +23,14 @@ Seit Mitte der 1990er Jahre entwickelte und seit Mitte der 2000er Jahre zunehmen
 Um aus cgMLST-Profilen ein Ausbruchsgeschehen zu rekonstruieren, muss die plausibelste Erklärung für die zwischen den untersuchten Krankheitserregern gefundenen Unterschiede gefunden und visualisiert werden. Dies kann mit Hilfe eines \textbf{minimum spanning tree} (\textbf{MST}) erfolgen. Ein MST ist eine solche Auswahl von Kanten eines Graphen, dass alle Knoten miteinander ohne Zyklen und mit dem niedrigsten möglichen summierten Kantengewicht verbunden sind. Der MST eines cgMLST-Graphen, bei dem jeder Knoten ein Bakterium darstellt und das Gewicht einer Kante zwischen zwei Knoten die Distanz zwischen den Sequenztypen der beiden Bakterien ist, zeigt somit einen plausiblen Ansteckungsverlauf: Kurze Kanten deuten potentiell auf direkte Ansteckungen hin, längere Kanten auf Ansteckungen die indirekt - also über weitere Beteiligte oder längere Zeiträume hinweg, für die in dem Datensatz keine Sequenzinformation vorhanden ist - erfolgten. Dies stützt sich auf der Tatsache, dass Mutationen rein zufällig stattfinden, über einen gewissen Zeitraum (wie die typische Dauer zwischen Ansteckung eines Patienten und Ausbruch der Krankheit, die die Weitergabe der Krankheitserreger an weitere Patienten ermöglicht) sich also immer eine ähnliche Anzahl von Mutationen in einem Genom ansammeln sollte. 
 
 Ein MST kann beispielsweise mittels Kruskal's Algorithmus erstellt werden, der aus dem Modul Algorithem und Datenstrukturen bereits bekannt sein sollte. 
+
+\subsection{Empfohlene Youtube-Videos}
+
+Für diese Thematik gibt es leider wenig Video-Material in einer passenden Detail-Tiefe, das meiste Material ist an Biologen gerichtet. Empfehlenswert um einen guten Überblick sowohl mit etwas Hintergrundinformation als auch mit Tiefgang zu bekommen ist dieses Video: \href{https://www.youtube.com/watch?v=YyNej7DCl84}{https://www.youtube.com/watch?v=YyNej7DCl84}
+
+\subsection{Kontrollfragen}
+\begin{enumerate}
+	\item Weshalb werden bei einer MLST-Analyse nur wenige Gene untersucht?
+	\item Was ist das Maß für die Distant zwischen zwei Sequenztypen und welche Vorteile erhofft man sich von der Nutzung dieser Metrik?
+	\item Welche Information kann durch einen Minimum Spanning Tree aus den cgMLST-Profilen von Krankheitserregern, die in Verdacht stehen, Teil eines Ausbruchs zu ein, visualisiert werden? Kann diese Information auch gewonnen werden, wenn der MST aus MLST-Profilen (anstatt von cgMLST-Profilen) generiert wird?
+\end{enumerate}
